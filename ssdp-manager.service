@@ -1,0 +1,13 @@
+[Unit]
+Description= SSDP Manager
+
+[Service]
+ExecStart=/usr/bin/env ssdp-manager
+SyslogIdentifier=ssdp-manager
+Restart=always
+
+Type=dbus
+BusName=xyz.openbmc_project.ssdp.Manager
+
+[Install]
+WantedBy=multi-user.target
